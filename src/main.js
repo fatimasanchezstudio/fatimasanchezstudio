@@ -39,32 +39,52 @@ if (galleryItems.length) {
 
 const form = document.querySelector("[data-contact-form]");
 const note = document.querySelector("[data-form-note]");
+const submitBtn = document.querySelector("[data-submit-btn]");
 
 if (form) {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    if (note) note.textContent = "";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Enviando…";
+    }
+
     const data = new FormData(form);
     const nombre = String(data.get("nombre") || "").trim();
     const apellido = String(data.get("apellido") || "").trim();
-    const email = String(data.get("email") || "").trim();
-    const telefono = String(data.get("telefono") || "").trim();
     const asunto = String(data.get("asunto") || "").trim();
-    const mensaje = String(data.get("mensaje") || "").trim();
 
-    if (!nombre || !apellido || !email) {
-      if (note) note.textContent = "Por favor, completa los campos obligatorios.";
-      return;
-    }
-
-    const subject = encodeURIComponent(asunto || `Consulta de ${nombre} ${apellido}`);
-    const body = encodeURIComponent(
-      `Nombre: ${nombre} ${apellido}\nEmail: ${email}\nTeléfono: ${telefono}\n\n${mensaje}`
+    data.set(
+      "_subject",
+      asunto || `Consulta de ${nombre} ${apellido}`.trim() || "Nueva consulta desde la web"
     );
 
-    window.location.href = `mailto:info.fatima.studio@gmail.com?subject=${subject}&body=${body}`;
-    if (note) {
-      note.textContent = "Abriendo tu correo para enviar el mensaje…";
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        form.reset();
+        if (note) note.textContent = "Mensaje enviado. ¡Gracias! Te responderé pronto.";
+      } else {
+        const result = await response.json().catch(() => null);
+        const message =
+          result?.errors?.map((e) => e.message).join(" ") ||
+          "No se pudo enviar el mensaje. Inténtalo de nuevo.";
+        if (note) note.textContent = message;
+      }
+    } catch {
+      if (note) note.textContent = "Error de conexión. Inténtalo de nuevo.";
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Enviar";
+      }
     }
-    form.reset();
   });
 }
