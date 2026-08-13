@@ -20,5 +20,5 @@ Pintura acrílica, color y obras que unen diseño y materia orgánica.
 
 ### 📬 Contacto
 
-- 📧 [info.fatima.studio@gmail.com](mailto:info.fatima.studio@gmail.com)
-- 📸 [@fatima.sanchez.studio](https://www.instagram.com/fatima.sanchez.studio/)
+📧 [info.fatima.studio@gmail.com](mailto:info.fatima.studio@gmail.com)  
+📸 [@fatimasanchezstudio](https://www.instagram.com/fatimasanchezstudio/)
