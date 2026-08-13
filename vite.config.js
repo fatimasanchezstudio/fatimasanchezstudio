@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         obras: resolve(__dirname, 'obras.html'),
         sobreMi: resolve(__dirname, 'sobre-mi.html'),
+        privacidad: resolve(__dirname, 'privacidad.html'),
       },
     },
   },

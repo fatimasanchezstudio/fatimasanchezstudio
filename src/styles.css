@@ -361,11 +361,58 @@ main {
   transform: translateY(1px);
 }
 
-.form-note {
-  min-height: 1.25rem;
-  margin: 0.35rem 0 0;
-  font-family: var(--font-serif);
-  font-size: 0.8rem;
+.form-privacy {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.form-privacy a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.form-privacy a:hover {
+  color: var(--color-ink);
+}
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1.75rem 4rem;
+}
+
+.legal h1 {
+  margin: 0 0 1rem;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--color-ink);
+}
+
+.legal h2 {
+  margin: 2rem 0 0.65rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.legal p,
+.legal-intro {
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-ink-deep);
+}
+
+.legal a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-note {
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
   color: var(--color-muted);
 }
 
