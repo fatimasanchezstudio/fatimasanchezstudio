@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obras | Fátima Sánchez Studio</title>
+    <meta
+      name="description"
+      content="Galería de obras de Fátima Sánchez. Pintura acrílica, naturaleza, animales y encargos."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Fátima Sánchez Studio">
+          <img src="/images/logo-fatima.png" alt="Fátima" />
+        </a>
+
+        <nav class="nav" data-nav aria-label="Principal">
+          <a href="/">Inicio</a>
+          <a class="is-active" href="/obras.html">Obras</a>
+          <a href="/sobre-mi.html">Sobre mí</a>
+        </nav>
+
+        <div class="header-spacer" aria-hidden="true"></div>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery" aria-label="Galería de obras">
+        <article class="gallery-item"><img src="/images/obra-01.png" alt="Obra 1" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-02.png" alt="Obra 2" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-03.png" alt="Obra 3" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-04.png" alt="Obra 4" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-05.png" alt="Obra 5" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-06.png" alt="Obra 6" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-07.png" alt="Obra 7" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-08.png" alt="Obra 8" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-09.png" alt="Obra 9" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-10.png" alt="Obra 10" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-11.png" alt="Obra 11" loading="lazy" /></article>
+        <article class="gallery-item"><img src="/images/obra-12.png" alt="Obra 12" loading="lazy" /></article>
+      </section>
+
+      <section class="contact" aria-label="Contacto">
+        <div class="contact-panel">
+          <h1 class="contact-title">Quiero más información</h1>
+          <form class="contact-form" data-contact-form>
+            <div class="form-row">
+              <div class="field">
+                <label for="nombre">Nombre<span class="req">*</span></label>
+                <input id="nombre" name="nombre" type="text" required autocomplete="given-name" />
+              </div>
+              <div class="field">
+                <label for="apellido">Apellido<span class="req">*</span></label>
+                <input id="apellido" name="apellido" type="text" required autocomplete="family-name" />
+              </div>
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" autocomplete="tel" />
+              </div>
+              <div class="field">
+                <label for="email">Email<span class="req">*</span></label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="asunto">Asunto</label>
+              <input id="asunto" name="asunto" type="text" />
+            </div>
+            <div class="field field-message">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje"></textarea>
+            </div>
+            <button class="submit-btn" type="submit">Enviar</button>
+            <p class="form-note" data-form-note></p>
+          </form>
+        </div>
+
+        <div class="contact-visual">
+          <img
+            src="/images/contact-studio-crop.png"
+            alt="Fátima Sánchez trabajando en el estudio"
+            width="816"
+            height="1025"
+            loading="lazy"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-contact">
+          <a href="https://www.instagram.com/fatima.sanchez.studio/" target="_blank" rel="noopener noreferrer"
+            >@fatima.sanchez.studio</a
+          ><br />
+          <a href="mailto:info.fatima.studio@gmail.com">info.fatima.studio@gmail.com</a>
+        </div>
+
+        <div class="footer-quote">
+          <p>"La pasión es el puente que te lleva</p>
+          <p>del dolor al cambio."</p>
+        </div>
+
+        <div class="footer-brand">
+          <img src="/images/logo-fatima.png" alt="Fátima" />
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
