@@ -1,25 +1,24 @@
-# Fátima Sánchez Studio
+# 🎨 Fátima Sánchez Studio
 
-Copia en código de [la web de Wix](https://infofatimastudio5.wixsite.com/my-site-1) con las mismas secciones, textos e imágenes.
+> *“La pasión es el puente que te lleva del dolor al cambio.”*
 
-## Páginas
+Sitio web oficial de **Fátima Sánchez** — artista andaluza afincada en Madrid.  
+Pintura acrílica, color y obras que unen diseño y materia orgánica.
 
-- `index.html` — Inicio
-- `obras.html` — Galería + formulario de contacto
-- `sobre-mi.html` — Biografía
+---
 
-## Arrancar en local
+### ✨ Qué encontrarás
 
-```bash
-npm install
-npm run dev
-```
+| | |
+|---|---|
+| 🏠 **Inicio** | Presentación y atmósfera del estudio |
+| 🖼 **Obras** | Galería de pintura |
+| 🤍 **Sobre mí** | Biografía y trayectoria |
+| ✉️ **Contacto** | Encargos y consultas |
 
-Luego abre la URL que muestre Vite (normalmente `http://localhost:5173`).
+---
 
-## Build
+### 📬 Contacto
 
-```bash
-npm run build
-npm run preview
-```
+- 📧 [info.fatima.studio@gmail.com](mailto:info.fatima.studio@gmail.com)
+- 📸 [@fatima.sanchez.studio](https://www.instagram.com/fatima.sanchez.studio/)
